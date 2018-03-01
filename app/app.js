@@ -9,6 +9,6 @@
       'com.module.subreddit'
     ])
     .constant('ENV', {
-      redditApiUrl: 'https://api.reddit.com'
+      redditApiUrl: 'https://api.reddit.com/'
     })
 })();

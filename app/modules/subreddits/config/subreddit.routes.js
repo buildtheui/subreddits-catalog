@@ -7,8 +7,7 @@
         .state('app.catalog', {
           abstract: true,
           url: '/catalog',
-          templateUrl: 'modules/subreddits/views/catalog.html',
-          controller: 'CatalogCtrl' 
+          templateUrl: 'modules/subreddits/views/catalog.html'
         })
         .state('app.catalog.index', {
           url: '',
@@ -19,9 +18,7 @@
         .state('app.catalog.infinitescroll', {
           url: '/catalog-scroll',
           templateUrl: 'modules/subreddits/views/infinite-scroll-catalog.html',
-          controller: function ($state) {
-
-          }
+          controller: 'CatalogScrollCtrl'
         })
          $urlRouterProvider.otherwise('/app');
     });
