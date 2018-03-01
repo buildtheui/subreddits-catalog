@@ -5,6 +5,7 @@
       'ui.router',
       'ngAnimate',
       'angular-loading-bar',
+      'infinite-scroll',
       'com.module.core',
       'com.module.subreddit'
     ])

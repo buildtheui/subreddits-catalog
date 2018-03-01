@@ -11,6 +11,12 @@
 				return (imgUrl.length > 0) ? imgUrl : fallBackImgUrl;
 			}
 
+			// refactor subreddit description
+			$scope.descriptionRefactor = function (descriptionText) {
+				var fallBackDescription = 'Description for this subreddit is not available';
+				return (descriptionText.length > 0) ? descriptionText : fallBackDescription;
+			}
+
 			// getting the subreddit list
 			SubredditService.getSubredditsList('').then(function (redditList) {
 				redditList = redditList.data.data.children

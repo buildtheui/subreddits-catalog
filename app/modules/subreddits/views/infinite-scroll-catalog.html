@@ -1,18 +1,16 @@
 <section class="container">
   <div class="row">
     <div class="col-md-4" ng-repeat="subreddit in subredditItems">
-      <article id="photo-item-1">
-        <div class="featured-image img-wrapper">
-          <a href="{{'http://reddit.com' + subreddit.data.url }}" class="img-link" title="Photo Item 1">
-            <img src="{{imgRefactorUrl(subreddit.data.banner_img)}}" class="scale-with-grid" alt="Random Iceberg Photo">
-            <div class="overlay zoom"></div>
-          </a>
+      <div class="card card-wrapper">
+        <img class="card-img-top card-img-reddit" src="{{imgRefactorUrl(subreddit.data.banner_img)}}" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">
+            <a href="{{'http://reddit.com' + subreddit.data.url}}">{{subreddit.data.display_name_prefixed}}</a>
+          </h4>
+          <p class="card-text">{{descriptionRefactor(subreddit.data.submit_text) | truncate:true:100:' ...'}}</p>
+          <a href="#" class="btn btn-primary">Detalles</a>
         </div>
-        <h4>
-          <a href="{{'http://reddit.com' + subreddit.data.url}}">{{subreddit.data.display_name_prefixed}}</a>
-        </h4>
-        <p>{{subreddit.data.submit_text | truncate:true:100:' ...'}}</p>
-      </article>
+      </div>
     </div>    
   </div>
 </section>
