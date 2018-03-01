@@ -11,11 +11,7 @@
        * @returns {Object}
        */
       this.getSubredditsList = function (afterId) {
-        var afterQuery = ''
-        if (afterId !== '') {
-          afterQuery = 't3_' + afterId
-        }
-        return $http.get(ENV.redditApiUrl + 'reddits?limit=9&after=' + afterQuery + '.json');
+        return $http.get(ENV.redditApiUrl + 'reddits.json?limit=9&after=' + afterId);
       };
 
     });
