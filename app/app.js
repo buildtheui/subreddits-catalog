@@ -9,11 +9,6 @@
       'com.module.subreddit'
     ])
     .constant('ENV', {
-      hostUrl: location.protocol 
+      redditApiUrl: 'https://api.reddit.com'
     })
-
-  function getPort() {
-    return (location.port == '') ? '' : ':' + location.port;
-  }
-
 })();
