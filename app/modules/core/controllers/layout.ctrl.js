@@ -11,10 +11,9 @@
      * @requires CoreService
      * @requires gettextCatalog
      **/
-    .controller('LayoutCtrl', function ($scope, $rootScope, CoreService, $state, PermPermissionStore) {
+    .controller('LayoutCtrl', function ($scope, $rootScope, CoreService, $state) {
 
       $scope.appName = 'Reddit Catalog';
-      $scope.apiUrl = CoreService.env.apiUrl + "/app";
 
     });
 

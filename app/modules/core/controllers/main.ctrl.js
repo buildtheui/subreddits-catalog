@@ -13,7 +13,7 @@
    **/
   angular
     .module('com.module.core')
-    .controller('MainCtrl', function (UserService, $scope, $rootScope, $state, CoreService) {
+    .controller('MainCtrl', function ($scope, $rootScope, $state, CoreService) {
   
     });
 
