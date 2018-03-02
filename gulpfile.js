@@ -15,23 +15,23 @@ gulp.task('useref', function () {
     .pipe(gulpIf('*.js', uglify({ mangle: false })))
     // Minifies only if it's a CSS file
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist/app/assets'))
+    .pipe(gulp.dest('dist'))
 });
 
 gulp.task('images', function () {
   return gulp.src('app/assets/images/*')
-    .pipe(gulp.dest('dist/app/assets/images'))
+    .pipe(gulp.dest('dist/images'))
 });
 
 gulp.task('htmlmodules', function () {
   return gulp.src('app/modules/**/views/*.html')
     // Minifies only if it's a html file
     .pipe(gulpIf('*.html', htmlmin({ collapseWhitespace: true })))
-    .pipe(gulp.dest('dist/app/assets/app/modules'))
+    .pipe(gulp.dest('dist/app/modules'))
 });
 
-gulp.task('clean:dist', function() { 
-   return del(['.tmp', 'dist/*'], { dot: true })
+gulp.task('clean:dist', function () {
+  return del(['.tmp', 'dist/*'], { dot: true })
 });
 
 gulp.task('default', function (callback) {
