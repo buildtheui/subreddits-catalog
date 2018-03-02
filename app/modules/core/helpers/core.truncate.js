@@ -2,6 +2,10 @@
   'use strict';
   angular
     .module('com.module.core')
+    /** 
+     * filter every text and truncate text depending on
+     * the number of characters defined
+    */ 
     .filter('truncate', function () {
     return function (value, wordwise, max, tail) {
       if (!value) return '';
