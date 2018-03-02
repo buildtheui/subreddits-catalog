@@ -7,6 +7,7 @@
       'angular-loading-bar',
       'infinite-scroll',
       'ui.bootstrap',
+      'ui.bootstrap.modal',
       'com.module.core',
       'com.module.subreddit'
     ])

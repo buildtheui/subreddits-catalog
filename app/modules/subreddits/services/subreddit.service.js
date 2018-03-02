@@ -14,5 +14,14 @@
         return $http.get(ENV.redditApiUrl + 'reddits.json?limit=9&after=' + afterId);
       };
 
+      /**
+       *  List Top 5 comments from a subreddit
+       * @param {String} urlSubreddit
+       * @returns {Object}
+       */
+      this.getTopFiveComments = function (urlSubreddit) {
+        return $http.get(ENV.redditApiUrl + urlSubreddit + 'top.json?limit=5');
+      };
+
     });
 })();

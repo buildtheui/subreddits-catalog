@@ -37,17 +37,11 @@
 
 			// open modal to see subreddit descriptions
 			$scope.subredditDetailsOpen = function (redditItem) {
-				$uibModal.open({
-					scope: $scope,
-					templateUrl: 'myModalContent.html',
-					size: 'lg',
-					controller: 'SubredditDetailsCtrl'
-				})
-				/* var modalInstance = $uibModal.open({
+				var modalInstance = $uibModal.open({
 					animation: true,
 					ariaLabelledBy: 'modal-title',
 					ariaDescribedBy: 'modal-body',
-					templateUrl: 'myModalContent.html',
+					templateUrl: 'app/modules/subreddits/views/subreddit-details.html',
 					controller: 'SubredditDetailsCtrl',
 					size: 'lg',
 					resolve: {
@@ -55,17 +49,23 @@
 							return redditItem;
 						}
 					}
-				}); */
+				});
 
 			};
 
 		})
 
-		.controller('SubredditDetailsCtrl', function ($scope, $uibModalInstance) {
-			//$scope.subreddit = subreddit;
+		.controller('SubredditDetailsCtrl', function ($scope, $uibModalInstance, subreddit, SubredditService) {
+			$scope.subreddit = subreddit;
+			$scope.topComments = [];
 			$scope.close = function () {
 				$uibModalInstance.dismiss('cancel');
-			};		
+			};
+			
+			// getting the top 5 comments from the current subreddit
+			SubredditService.getTopFiveComments(subreddit.url).then(function (topComments) {
+				$scope.topComments = topComments.data.data.children;
+			});
 		});
 
 })();
