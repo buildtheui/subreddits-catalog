@@ -2,7 +2,7 @@
 
 List of subbredits catalogs (infinite scroll) using AngularJs [Demo](https://whispers16.github.io/subreddits-catalog)
 
-![alt text](https://whispers16.github.io/subreddits-catalog/images/logo.png  "Reddit Catalog")
+![reddit catalog|922x282,60%](https://whispers16.github.io/subreddits-catalog/images/logo.png  "Reddit Catalog")
 
   
 ## Description
