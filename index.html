@@ -18,18 +18,21 @@
   <link rel="icon" href="app/assets/images/favicon.ico">
 
     <!-- CSS theme -->
+    <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="app/assets/css/base.css">
     <link rel="stylesheet" href="app/assets/css/skeleton.css">
     <link rel="stylesheet" href="app/assets/css/layout.css">
 
-    <!-- our custm CSS -->
+    <!-- our custom CSS -->
     <link rel="stylesheet" href="app/assets/css/custom.css">
 
-  <!-- CSS Implementing Plugins -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  <link rel="stylesheet" href="node_modules/angular-loading-bar/build/loading-bar.min.css">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="node_modules/angular-loading-bar/build/loading-bar.min.css">
+    <!--endbuild-->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous">
+ 
 
 </head>
 
@@ -41,6 +44,7 @@
     crossorigin="anonymous"></script>
 
   <!-- angular libraries -->
+  <!--build:js js/main.min.js -->
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
   <script src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
@@ -48,7 +52,7 @@
   <script src="node_modules/ng-infinite-scroll/build/ng-infinite-scroll.min.js"></script>
   <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
   <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
-
+  
 
   <!-- subreddit app modules -->
   <script src="app/modules/subreddits/app.subreddit.js"></script>
@@ -69,7 +73,7 @@
 
   <!-- Main app file -->
   <script src="app/app.js"></script>
-
+  <!-- endbuild -->
 </body>
 
 </html>

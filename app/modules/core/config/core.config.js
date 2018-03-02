@@ -8,8 +8,5 @@
         cfpLoadingBarProvider.includeSpinner = false;
       }
     ])
-    .run(function ($rootScope) {
-
-    });
 
 })();
