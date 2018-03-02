@@ -10,15 +10,12 @@ showing its banner, header title, long description, submission text and any othe
 
 ## How to run it
 
-Install all the dependencies
-
-  ```$ npm install```
-To run the project use
-
-  ```$ npm run dev```
-To build the project for production use
-
-  ```$ npm run build```
+Install all the dependencies ```$ npm install```
+  
+To run the project use ```$ npm run dev```
+  
+To build the project for production use ```$ npm run build```
+  
 
 ## Project structure
 This project was built thinking on a modularize approach, so in case the project grows it may be mantainable.
