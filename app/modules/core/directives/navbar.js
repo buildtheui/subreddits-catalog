@@ -11,7 +11,7 @@
     .module('com.module.core')
     .directive('navbar', function () {
       return {
-        templateUrl: 'app/modules/core/views/elements/navbar.html',
+        templateUrl: 'app/modules/core/views/navbar.html',
         restrict: 'E'
       };
     });

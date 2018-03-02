@@ -13,8 +13,8 @@
    **/
   angular
     .module('com.module.core')
-    .controller('MainCtrl', [ function () {
+    .controller('MainCtrl', function () {
   
-    }]);
+    });
 
 })();

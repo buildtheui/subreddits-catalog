@@ -12,7 +12,7 @@ gulp.task('useref', function () {
   return gulp.src('index.html')
     .pipe(useref())
     // Minifies only if it's a JavaScript file
-    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.js', uglify({ mangle: false })))
     // Minifies only if it's a CSS file
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist/app/assets'))
@@ -27,7 +27,7 @@ gulp.task('htmlmodules', function () {
   return gulp.src('app/modules/**/views/*.html')
     // Minifies only if it's a html file
     .pipe(gulpIf('*.html', htmlmin({ collapseWhitespace: true })))
-    .pipe(gulp.dest('dist/app/assets/modules'))
+    .pipe(gulp.dest('dist/app/assets/app/modules'))
 });
 
 gulp.task('clean:dist', function() { 
