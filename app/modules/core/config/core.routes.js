@@ -7,12 +7,12 @@
         .state('app', {
           abstract: true,
           url: '/app',
-          templateUrl: 'modules/core/views/app.html',
+          templateUrl: 'app/modules/core/views/app.html',
           controller: 'MainCtrl'
         })
         .state('app.home', {
           url: '',
-          templateUrl: 'modules/core/views/home.html',
+          templateUrl: 'app/modules/core/views/home.html',
           controller: 'HomeCtrl'
         });
       //$urlRouterProvider.otherwise('/app');

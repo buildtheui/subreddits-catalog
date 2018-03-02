@@ -2,7 +2,7 @@
 	'use strict';
 	angular
 		.module('com.module.subreddit')
-		.controller('CatalogScrollCtrl', function ($scope, $timeout, $state, SubredditService) {
+		.controller('CatalogScrollCtrl', function ($scope, $timeout, $state, $uibModal, SubredditService) {
 			$scope.subredditItems = [];
 			$scope.busy = false;
 			$scope.after = '';
@@ -34,5 +34,38 @@
 					$scope.busy = false;
 				});
 			};
+
+			// open modal to see subreddit descriptions
+			$scope.subredditDetailsOpen = function (redditItem) {
+				$uibModal.open({
+					scope: $scope,
+					templateUrl: 'myModalContent.html',
+					size: 'lg',
+					controller: 'SubredditDetailsCtrl'
+				})
+				/* var modalInstance = $uibModal.open({
+					animation: true,
+					ariaLabelledBy: 'modal-title',
+					ariaDescribedBy: 'modal-body',
+					templateUrl: 'myModalContent.html',
+					controller: 'SubredditDetailsCtrl',
+					size: 'lg',
+					resolve: {
+						subreddit: function () {
+							return redditItem;
+						}
+					}
+				}); */
+
+			};
+
+		})
+
+		.controller('SubredditDetailsCtrl', function ($scope, $uibModalInstance) {
+			//$scope.subreddit = subreddit;
+			$scope.close = function () {
+				$uibModalInstance.dismiss('cancel');
+			};		
 		});
+
 })();
