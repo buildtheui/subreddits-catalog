@@ -2,6 +2,6 @@
   'use strict';
   angular
     .module('com.module.subreddit')
-    .run(function ($rootScope) {
+    .run(function () {
     })
 })();

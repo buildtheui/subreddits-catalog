@@ -9,8 +9,8 @@
    **/
   angular
     .module('com.module.core')
-    .controller('HomeCtrl', function ($scope, $state, CoreService) {
+    .controller('HomeCtrl', ['$state', function ($state) {
       $state.go('app.catalog.index');
-  });
+  }]);
 
 })();

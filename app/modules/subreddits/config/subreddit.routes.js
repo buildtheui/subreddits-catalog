@@ -2,7 +2,7 @@
   'use strict';
   angular
     .module('com.module.subreddit')
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
       $stateProvider
         .state('app.catalog', {
           abstract: true,
@@ -21,5 +21,5 @@
           controller: 'CatalogScrollCtrl'
         })
          $urlRouterProvider.otherwise('/app');
-    });
+    }]);
 })();

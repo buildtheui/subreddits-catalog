@@ -2,7 +2,7 @@
   'use strict';
   angular
     .module('com.module.subreddit')
-    .service('SubredditService', function ($state, $http, ENV) {
+    .service('SubredditService', ['$state', '$http', 'ENV', function ($state, $http, ENV) {
 
       /**
        *  List all subreddits with paggination, depending on the 
@@ -23,5 +23,5 @@
         return $http.get(ENV.redditApiUrl + urlSubreddit + 'top.json?limit=5');
       };
 
-    });
+    }]);
 })();

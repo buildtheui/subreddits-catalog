@@ -2,7 +2,7 @@
   'use strict';
   angular
     .module('com.module.core')
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
       $stateProvider
         .state('app', {
           abstract: true,
@@ -16,6 +16,6 @@
           controller: 'HomeCtrl'
         });
       //$urlRouterProvider.otherwise('/app');
-    });
+    }]);
 
 })();

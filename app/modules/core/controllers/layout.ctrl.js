@@ -11,10 +11,10 @@
      * @requires CoreService
      * @requires gettextCatalog
      **/
-    .controller('LayoutCtrl', function ($scope, $rootScope, CoreService, $state) {
+    .controller('LayoutCtrl', ['$scope', function ($scope) {
 
       $scope.appName = 'Reddit Catalog';
 
-    });
+    }]);
 
 })();
